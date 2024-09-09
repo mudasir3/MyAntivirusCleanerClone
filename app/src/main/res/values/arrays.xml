@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="question_arrays">
+        <item>What is your favorite team?</item>
+        <item>When is your birthday?</item>
+        <item>In what town was your first job?</item>
+        <item>Who is your childhood sports hero?</item>
+        <item>What was your childhood nickname?</item>
+    </array>
+</resources>

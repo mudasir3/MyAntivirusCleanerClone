@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.studioninja.antivirus.mobilesecurity">
+
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialDrawerTheme.TranslucentStatus">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.ScanningActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.ResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.ProblemDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.ln.antivirus.mobilesecurity.service.MonitorShieldService"
+            android:enabled="true" />
+        <receiver
+            android:name="com.ln.antivirus.mobilesecurity.receiver.BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.privacy"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.boosterscan"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.PhoneInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.IgnoredListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.AppLockScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.AppLockHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.AppLockCreatePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.AppLockSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.AppLockEditPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.AppLockForgotPasswordActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.ResultAppLockCreatePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.AppLockImagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.AppLockImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.ScanningResultActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.ln.antivirus.mobilesecurity.service.MyAccessibilityService"
+            android:label="♣ Mobile Security"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/serviceconfig" />
+        </service>
+        <service
+            android:name="com.ln.antivirus.mobilesecurity.service.BoosterService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.ln.antivirus.mobilesecurity.activities.SafeActivity"
+            android:screenOrientation="portrait" />
+        <service
+            android:name="com.ln.antivirus.mobilesecurity.service.LockService"
+            android:enabled="true"
+            android:exported="true" />
+
+
+
+    </application>
+
+</manifest>

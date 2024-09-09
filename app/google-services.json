@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "651310576625",
+    "firebase_url": "https://antivirus-e7959.firebaseio.com",
+    "project_id": "antivirus-e7959",
+    "storage_bucket": "antivirus-e7959.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651310576625:android:a025eca5e5dae56b",
+        "android_client_info": {
+          "package_name": "com.xyzstudio.antivirus.mobilesecurity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651310576625-1ts1j2lh4vovim0l4gtoe376k610pv1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRv6_HYEYVgD5qqIc1VnAlb4NBIcLy5cw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

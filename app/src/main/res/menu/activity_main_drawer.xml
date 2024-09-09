@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@mipmap/ic_setting_menu"
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_chanrging_boost"
+            android:icon="@mipmap/ic_chargingboost_menu"
+            android:title="Charging Boost" />
+        <item
+            android:id="@+id/nav_quiet_notifications"
+            android:icon="@mipmap/ic_notifications_menu"
+            android:title="Slideshow" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@mipmap/ic_feedback_menu"
+            android:title="Feedback" />
+        <item
+            android:id="@+id/nav_update"
+            android:icon="@mipmap/ic_update_menu"
+            android:title="Update" />
+        <item
+            android:id="@+id/nav_introduction"
+            android:icon="@mipmap/ic_introduction_menu"
+            android:title="Introduction" />
+        <item
+            android:id="@+id/nav_phone_info"
+            android:icon="@mipmap/ic_ihoneinfo_menu"
+            android:title="Phone Info" />
+    </group>
+</menu>
